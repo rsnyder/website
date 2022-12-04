@@ -1,2 +1,1 @@
-# gh-pages
-Github Pages hosting files
+# Juncture Github Pages
