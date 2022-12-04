@@ -48,18 +48,32 @@
           return basePathElems.length > 0 ? `/${basePathElems.join('/')}/` : '/'
         }
       },
-      created() {
-        this.acct = this.acct || (this.isGhp ? location.host.split('.')[0] : this.pathElems.length > 0 ? this.pathElems[0] : '')
-        this.repo = this.repo || (this.isGhp ? this.pathElems.length > 0 ? this.pathElems[0] : '' : this.pathElems.length > 1 ? this.pathElems[1] : '')
+      created() {},
+      async mounted() {
+        let config = await this.loadConfig()
+        this.acct = config.acct|| this.acct || (this.isGhp ? location.host.split('.')[0] : this.pathElems.length > 0 ? this.pathElems[0] : '')
+        this.repo = config.repo || this.repo || (this.isGhp ? this.pathElems.length > 0 ? this.pathElems[0] : '' : this.pathElems.length > 1 ? this.pathElems[1] : '')
+        this.ref = config.ref || ''
         document.head.querySelector('base').href = this.base
         console.log(`acct=${this.acct} repo=${this.repo} ref=${this.ref} path=${this.path} prefix=${this.prefix} base=${this.base} isGhp=${this.isGhp}`)
+        this.loadPage()
       },
-      mounted() { this.loadPage() },
       methods: {
+
+        async loadConfig() {
+          return fetch('/config.yaml').then(resp => resp.ok ? resp.text() : '')
+            .then(configYaml => 
+              Object.fromEntries(configYaml.split('\n')
+                .map(line => line.trim()).filter(line => line)
+                .map(line => line.split(':').map(part => part.trim()))
+              )
+            )
+        },
 
         loadPage() {
           let url = `https://api.juncture-digital.org/html/${this.prefix}/${this.path}${this.path === '' ? '' : '/'}?base=${this.baseQarg}&prefix=${this.prefix}&inline=true`
           if (this.ref) url += `&ref=${this.ref}`
+          console.log('loadPage', url)
           fetch(url).then(resp => resp.text())
           .then(html => {
             let [head, body] = new DOMParser().parseFromString(html, 'text/html').children[0].children
