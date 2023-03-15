@@ -8,6 +8,8 @@
     - Q1001134 layer="Hilton Head Island" prefer-geojson disabled
     - https://raw.githubusercontent.com/rsnyder/media/main/geojson/Sun_City,_Hilton_Head.geojson layer="Sun City"  id=sun-city wc:Dell_Webb_Sun_City_Hilton_Head.jpg fillColor=red color=red weight=2 fillOpacity=0.1 zoom=12
     - allmaps=3a88f7c6d07ff99e layer="Sun City North Map" disabled
-    - 32.32347,-80.97122 "1121 Sunfish Way, Bluffton, SC 29909" layer="Home Site" zoom=16
+    - 32.32347,-80.97122 "1121 Sunfish Way, Bluffton, SC 29909" layer="Home Site" id=home-site zoom=16
     
 ==Sun City=={flyto:sun-city}
+
+==Home site=={flyto:home-site}
