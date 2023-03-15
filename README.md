@@ -1,1 +1,1 @@
-# Juncture Github Pages
+# Snyderjr.com
