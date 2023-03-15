@@ -11,6 +11,8 @@
     - allmaps=3a88f7c6d07ff99e layer="Sun City North Map" disabled
     - 32.32347,-80.97122 "1121 Sunfish Way, Bluffton, SC 29909" layer="Home Site" id=home-site zoom=16
     
+==South Carolina Lowcountry=={flyto:lowcountry}
+
 ==Sun City=={flyto:sun-city}
 
 ==Home site=={flyto:home-site}
