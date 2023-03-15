@@ -1,6 +1,6 @@
 # Sun City
 
-.ve-map 32.48196,-80.74951 8 width=75% zoom-on-click right
+.ve-map 32.59,-80.7 8 width=75% zoom-on-click right
     - Q83813 layer="Savannah" prefer-geojson disabled
     - Q47716 layer="Charleston" prefer-geojson disabled
     - Q813376 layer="Beaufort" prefer-geojson disabled
