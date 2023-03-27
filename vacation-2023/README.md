@@ -21,7 +21,7 @@
 
 ==Arches National Park=={flyto:Q223969}
 
-==Flagstaff, AZ=={flyto:Q79842,16}
+==Flagstaff, AZ=={flyto:Q79842,14}
 
 ==Grand Canyon National Park=={flyto:Q220289}
 
