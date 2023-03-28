@@ -2,7 +2,7 @@
 
 ##
 
-.ve-map 38.51379,-108.85254 6 right sticky
+.ve-map 38.51379,-108.85254 5 right sticky
     - Q16554
     - Q192517
     - Q777183
