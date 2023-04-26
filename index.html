@@ -71,7 +71,7 @@
         },
 
         loadPage() {
-          let url = `https://api.juncture-digital.org/html/${this.prefix}/${this.path}${this.path === '' ? '' : '/'}?base=${this.baseQarg}&prefix=${this.prefix}&inline=true`
+          let url = `https://dev.juncture-digital.org/html/${this.prefix}/${this.path}${this.path === '' ? '' : '/'}?base=${this.baseQarg}&prefix=${this.prefix}&inline=true`
           if (this.ref) url += `&ref=${this.ref}`
           console.log('loadPage', url)
           fetch(url).then(resp => resp.text())
