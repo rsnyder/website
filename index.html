@@ -72,7 +72,7 @@
 
         loadPage() {
           console.log(`loadPage: acct=${this.acct} repo=${this.repo} ref=${this.ref} path=${this.path} prefix=${this.prefix} base=${this.base} isGhp=${this.isGhp}`)
-          let url = `https://dev.juncture-digital.org/html/${this.prefix}/${this.path}${this.path === '' ? '' : '/'}?base=${this.baseQarg}&prefix=${this.prefix}&inline=true`
+          let url = `https://juncture-digital.org/html/${this.prefix}/${this.path}${this.path === '' ? '' : '/'}?base=${this.baseQarg}&prefix=${this.prefix}&inline=true`
           if (this.ref) url += `&ref=${this.ref}`
           console.log('loadPage', url)
           fetch(url).then(resp => resp.text())
