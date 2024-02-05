@@ -2,6 +2,6 @@
 
 # Snyderjr.com
 
-[Vacation - 2023](/vacation-2023)
+[Vacation - 2023](vacation-2023)
 
-[Sun City](/sun-city)
+[Sun City](sun-city)
